@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es2015", // Specify ECMAScript target version: "ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017" or "ESNext".
+    "module": "CommonJS", // Specify module code generation: "None", "CommonJS", "AMD", "System", "UMD", "ES6", "ES2015" or "ESNext".
+    "lib": ["ES7"],
+    "declaration": false, // Generates corresponding .d.ts file.
+    "sourceMap": true,
+    // "inlineSourceMap": true, // Emit a single file with source maps instead of having a separate file.
+    "resolveJsonModule": true,
+    "baseUrl": "/",
+
+    // --strict: tsrue
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied any type.
+    "noImplicitThis": true, // Raise error on this expressions with an implied any type.
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file
+    "strictNullChecks": true, // In strict null checking mode, the null and undefined values are not in the domain of every type and are only assignable to themselves and any (the one exception being that undefined is also assignable to void).
+    // "strictFunctionTypes": true, // Disable bivariant parameter checking for function types.
+
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement.
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value.
+    "noStrictGenericChecks": true, // Disable strict checking of generic signatures in function types.
+    "noUnusedLocals": true, // Report errors on unused locals.
+    "noUnusedParameters": true, // Report errors on unused parameters.
+
+    "preserveConstEnums": true, // Do not erase const enum declarations in generated code.
+    "removeComments": true, // Remove all comments except copy-right header comments beginning with /*!
+
+    "pretty": true, // Stylize errors and messages using color and context.
+
+    "suppressImplicitAnyIndexErrors": true, // https://github.com/Microsoft/TypeScript/issues/1232#issuecomment-64510362
+
+    "outDir": "./build",
+    "typeRoots": ["./src/types.d.ts", "./node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.json"],
+  "exclude": ["src/**/*.test.ts", "node_modules"]
+}

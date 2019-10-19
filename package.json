@@ -1,0 +1,24 @@
+{
+  "name": "docker-puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc src/index.ts && node src/index.js",
+    "watch": "NODE_ENV=development LOGLEVEL=trace ts-node-dev --no-notify --prefer-ts src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker build . -t docker-puppeteer",
+    "docker:run": "docker run -p 5900:5900 docker-puppeteer",
+    "docker": "yarn docker:build && yarn docker:run"
+  },
+  "author": "Alena Gilevskaya <alena@gilevskaya.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "1.17.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "1.19.0",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "typescript": "^3.6.4"
+  }
+}
